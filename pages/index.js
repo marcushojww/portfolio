@@ -4,6 +4,7 @@ import {
   Container,
   Heading,
   Box,
+  Flex,
   Image,
   SimpleGrid,
   Button,
@@ -13,6 +14,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import { MdOutlineWavingHand } from 'react-icons/md'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
@@ -25,20 +27,22 @@ import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 const Home = () => (
   <Layout>
     <Container>
-      <Box
+      <Flex
         borderRadius="lg"
         mb={6}
         p={3}
-        textAlign="center"
+        justifyContent="center"
+        align="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Hello, I'm a full-stack developer based in Japan!
-      </Box>
+        Hey <Icon ml={1} mr={2} as={MdOutlineWavingHand} /> I'm an aspiring
+        full-stack developer based in Singapore!
+      </Flex>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Marcus Ho Jun Wei
           </Heading>
           <p>Digital Craftsman ( Artist / Developer / Designer )</p>
         </Box>
