@@ -57,10 +57,8 @@ const Navbar = props => {
         alignItems="center"
         justify="space-between"
       >
-        <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Logo />
-          </Heading>
+        <Flex align="center" mr={8}>
+          <Logo />
         </Flex>
 
         <Stack
@@ -69,16 +67,16 @@ const Navbar = props => {
           width={{ base: 'full', md: 'auto' }}
           alignItems="center"
           flexGrow={1}
-          mt={{ base: 4, md: 0 }}
+          // mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            Works
+            Experience
           </LinkItem>
           <LinkItem href="/posts" path={path}>
-            Posts
+            Projects
           </LinkItem>
           <LinkItem
-            href="https://github.com/craftzdog/craftzdog-homepage"
+            href="https://github.com/marcushojww"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -87,11 +85,11 @@ const Navbar = props => {
             isExternal
           >
             <IoLogoGithub />
-            Source
+            GitHub
           </LinkItem>
         </Stack>
 
-        <Box flex={1} align="right">
+        <Flex flex={1} justifyContent="flex-end">
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
@@ -104,24 +102,25 @@ const Navbar = props => {
               />
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem as={Link}>About Me</MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
+                  <MenuItem as={Link}>Experience</MenuItem>
                 </NextLink>
                 <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
+                  <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
+                  href="https://github.com/marcushojww"
+                  isExternal
                 >
-                  View Source
+                  GitHub
                 </MenuItem>
               </MenuList>
             </Menu>
           </Box>
-        </Box>
+        </Flex>
       </Container>
     </Box>
   )
