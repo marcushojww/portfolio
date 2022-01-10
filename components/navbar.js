@@ -43,7 +43,8 @@ const Navbar = props => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
+      // bg={useColorModeValue('#ffffff40', '#20202380')}
+      // bg={useColorModeValue('#E6FFFA', '#20202380')}
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={1}
       {...props}
@@ -53,7 +54,7 @@ const Navbar = props => {
         p={2}
         maxW="container.md"
         wrap="wrap"
-        align="center"
+        alignItems="center"
         justify="space-between"
       >
         <Flex align="center" mr={5}>

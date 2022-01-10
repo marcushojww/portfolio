@@ -30,7 +30,7 @@ const Main = ({ children, router }) => {
         <title>Marcus Ho Jw's Portfolio</title>
       </Head>
 
-      <NavBar />
+      <NavBar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
         <LazyVoxelDog />
