@@ -88,7 +88,7 @@ const Navbar = props => {
           </LinkItem>
         </Stack>
 
-        <Flex flex={1} justifyContent="flex-end">
+        <Flex flexGrow={1} justifyContent="flex-end">
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>

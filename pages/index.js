@@ -1,4 +1,5 @@
 import NextLink from 'next/link'
+import { jsx } from '@emotion/react'
 import {
   Link,
   Container,
@@ -44,7 +45,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Marcus Ho Jun Wei
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>Friendly Neighbourhood Developer</p>
         </Box>
         <Box
           flexShrink={0}
@@ -59,7 +60,7 @@ const Home = () => (
             maxWidth="100px"
             display="inline-block"
             borderRadius="full"
-            src="/images/takuya.jpg"
+            src="/images/marcushojw.png"
             alt="Profile image"
           />
         </Box>
@@ -67,50 +68,38 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          About Me
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <NextLink href="/works/inkdrop">
-            <Link>Inkdrop</Link>
-          </NextLink>
-          .
+          Marcus is a final year CSD (Computer Science & Design) student at SUTD
+          and an aspiring full-stack developer with a passion for building
+          digital products he wants. He has a knack for all things launching
+          products, from planning and designing all the way to solving real-life
+          problems with code. When he's not coding, you might see him playing
+          tennis or playing the latest online shooter game with his friends.
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/works">
+          {/* <NextLink href="/works">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               My portfolio
             </Button>
-          </NextLink>
+          </NextLink> */}
         </Box>
       </Section>
 
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-          Bio
+          Education
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear first>2019 - Present</BioYear>
+          Final year CSD student at Singapore University of Technology and
+          Design, specializing in the Software & Systems Engineering Track
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
-        </BioSection>
-        <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Works as a freelance
+          <BioYear>2011 - 2016</BioYear>
+          Completed GCE 'A' Levels (Science) and 6 year integrated program at
+          Hwa Chong Institution
         </BioSection>
       </Section>
 
