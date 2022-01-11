@@ -1,5 +1,4 @@
 import NextLink from 'next/link'
-import { jsx } from '@emotion/react'
 import {
   Link,
   Container,
@@ -18,10 +17,12 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import { MdOutlineWavingHand } from 'react-icons/md'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
+import { SkillsSection, SkillsType, SkillsValues } from '../components/skills'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoLinkedin, IoLogoGithub, IoMailOutline } from 'react-icons/io5'
+import { SiGmail } from 'react-icons/si'
 import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 
@@ -67,15 +68,20 @@ const Home = () => (
       </Box>
 
       <Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
+        <Heading
+          display="flex"
+          alignItems="center"
+          as="h3"
+          variant="section-title"
+        >
           About Me
         </Heading>
         <Paragraph>
           Marcus is a final year CSD (Computer Science & Design) student at SUTD
           and an aspiring full-stack developer with a passion for building
-          digital products he wants. He has a knack for all things launching
-          products, from planning and designing all the way to solving real-life
-          problems with code. When he's not coding, you might see him playing
+          digital products he wants. He has a flair for everything related to
+          product launch, from planning and design to solving real-world
+          challenges with code. When he's not coding, you might see him playing
           tennis or playing the latest online shooter game with his friends.
         </Paragraph>
         <Box align="center" my={4}>
@@ -98,74 +104,86 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2011 - 2016</BioYear>
-          Completed GCE 'A' Levels (Science) and 6 year integrated program at
+          Completed GCE 'A' Levels (Science) and 6 year Integrated Program at
           Hwa Chong Institution
         </BioSection>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          I ♥
+          Skills
         </Heading>
-        <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
-        </Paragraph>
+        <SkillsSection>
+          <SkillsType>Languages</SkillsType>
+          <SkillsValues>
+            HTML, CSS, JavaScript, Python, Java, TypeScript
+          </SkillsValues>
+        </SkillsSection>
+        <SkillsSection>
+          <SkillsType>Libraries</SkillsType>
+          <SkillsValues>Next.js, React, Redux, jQuery</SkillsValues>
+        </SkillsSection>
+        <SkillsSection>
+          <SkillsType>Frameworks</SkillsType>
+          <SkillsValues>Vue.js, Node.js</SkillsValues>
+        </SkillsSection>
+        <SkillsSection>
+          <SkillsType>UI Prototyping</SkillsType>
+          <SkillsValues>Figma</SkillsValues>
+        </SkillsSection>
+        <SkillsSection>
+          <SkillsType>Database</SkillsType>
+          <SkillsValues>MySQL</SkillsValues>
+        </SkillsSection>
       </Section>
 
       <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          On the web
+        <Heading display="flex" align="center" as="h3" variant="section-title">
+          On the Web
+          <Image
+            src={useColorModeValue(
+              '/images/spiderweb-black.png',
+              '/images/spiderweb-white.png'
+            )}
+            w={6}
+            alt="Spiderweb image"
+            ml={2}
+          ></Image>
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/marcushojww" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoGithub} />}
               >
-                @craftzdog
+                GitHub
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link
+              href="https://www.linkedin.com/in/marcus-ho-jun-wei-201bb71a0/"
+              target="_blank"
+            >
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
+                leftIcon={<Icon as={IoLogoLinkedin} />}
               >
-                @inkdrop_app (English)
+                LinkedIn
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
+            <Link href="mailto:marcushojww@gmail.com" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<Icon as={IoLogoTwitter} />}
+                leftIcon={<Icon as={IoMailOutline} />}
               >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoInstagram} />}
-              >
-                @craftzdog
+                marcushojww@gmail.com
               </Button>
             </Link>
           </ListItem>
