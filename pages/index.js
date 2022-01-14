@@ -24,7 +24,7 @@ import { GridItem } from '../components/grid-item'
 import { IoLogoLinkedin, IoLogoGithub, IoMailOutline } from 'react-icons/io5'
 import { SiGmail } from 'react-icons/si'
 import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import thumbInkdrop from '../public/images/experience/inkdrop_eyecatch.png'
 
 const Home = () => (
   <Layout>

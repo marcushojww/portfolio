@@ -68,7 +68,7 @@ const Navbar = props => {
           alignItems="center"
           flexGrow={1}
         >
-          <LinkItem href="/works" path={path}>
+          <LinkItem href="/experience" path={path}>
             Experience
           </LinkItem>
           <LinkItem href="/posts" path={path}>
@@ -103,7 +103,7 @@ const Navbar = props => {
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>About Me</MenuItem>
                 </NextLink>
-                <NextLink href="/works" passHref>
+                <NextLink href="/experience" passHref>
                   <MenuItem as={Link}>Experience</MenuItem>
                 </NextLink>
                 <NextLink href="/posts" passHref>
