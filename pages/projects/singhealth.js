@@ -55,7 +55,7 @@ const Work = () => (
           <span>Figma</span>
         </ListItem>
         <ListItem>
-          <Meta>Source Code</Meta>
+          <Meta>Github</Meta>
           <Link href="https://github.com/marcushojww/SingHealthAuditApp">
             View Source Code
             <Icon ml={2} as={ExternalLinkIcon}></Icon>
