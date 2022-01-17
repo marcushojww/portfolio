@@ -11,16 +11,16 @@ import {
   Button
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
+import { ProjectsTitle, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 
 const Work = () => (
   <Layout title="Proper Mask Detection">
     <Container>
-      <Title>
+      <ProjectsTitle>
         Proper Mask Detection<Badge ml={2}>SEP 2021 - DEC 2021</Badge>
-      </Title>
+      </ProjectsTitle>
       <P>
         Part of SUTD’s 50.038 ‘Computational Data Science’ module where we were
         tasked to use machine learning tools to tackle a problem or topic of

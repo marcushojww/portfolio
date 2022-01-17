@@ -10,16 +10,16 @@ import {
   Icon
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
+import { ProjectsTitle, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 
 const Work = () => (
   <Layout title="SingHealth Web App">
     <Container>
-      <Title>
+      <ProjectsTitle>
         SingHealth Retail Management App <Badge>JAN 2021 - APR 2021</Badge>
-      </Title>
+      </ProjectsTitle>
       <P>
         Part of SUTD’s 50.003 ‘Elements of Software Construction’ module where
         we built a full stack application to ease the auditing process in the
