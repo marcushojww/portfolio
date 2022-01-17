@@ -18,9 +18,10 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
       <Image
         src={thumbnail}
         alt={title}
-        className="grid-item-thumbnail"
         placeholder="blur"
         loading="lazy"
+        height={500}
+        objectFit="cover"
       />
       <LinkOverlay href={href} target="_blank">
         <Text mt={2}>{title}</Text>
@@ -69,7 +70,6 @@ export const WorkGridItem = ({
                 <Badge colorScheme="teal" mr={2}>
                   ROLE
                 </Badge>
-
                 {role}
               </Text>
             )}

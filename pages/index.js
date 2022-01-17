@@ -11,8 +11,12 @@ import {
   List,
   ListItem,
   Icon,
-  useColorModeValue
+  useColorModeValue,
+  Text,
+  LinkBox,
+  LinkOverlay
 } from '@chakra-ui/react'
+import ImageNext from 'next/image'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { MdOutlineWavingHand } from 'react-icons/md'
 import Paragraph from '../components/paragraph'
@@ -23,8 +27,6 @@ import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoLinkedin, IoLogoGithub, IoMailOutline } from 'react-icons/io5'
 import { SiGmail } from 'react-icons/si'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/experience/inkdrop_eyecatch.png'
 
 const Home = () => (
   <Layout>
@@ -35,7 +37,7 @@ const Home = () => (
         p={3}
         justifyContent="center"
         align="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        bg={useColorModeValue('#ffffff40', 'whiteAlpha.200')}
       >
         Hey <Icon ml={1} mr={2} as={MdOutlineWavingHand} /> I'm an aspiring
         full-stack developer based in Singapore!
@@ -46,7 +48,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Marcus Ho Jun Wei
           </Heading>
-          <p>Friendly Neighbourhood Developer</p>
+          <p>Your Friendly Neighbourhood Developer</p>
         </Box>
         <Box
           flexShrink={0}
@@ -84,13 +86,18 @@ const Home = () => (
           challenges with code. When he's not coding, you might see him playing
           tennis or playing the latest online shooter game with his friends.
         </Paragraph>
-        <Box align="center" my={4}>
-          {/* <NextLink href="/works">
+        <Flex alignItems="center" my={4}>
+          <NextLink href="/experience">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
+              My Experience
             </Button>
-          </NextLink> */}
-        </Box>
+          </NextLink>
+          <NextLink href="/projects">
+            <Button ml={4} rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              My Projects
+            </Button>
+          </NextLink>
+        </Flex>
       </Section>
 
       <Section delay={0.2}>
@@ -140,15 +147,15 @@ const Home = () => (
       <Section delay={0.3}>
         <Heading display="flex" align="center" as="h3" variant="section-title">
           On the Web
-          <Image
+          {/* <Image
             src={useColorModeValue(
               '/images/spiderweb-black.png',
               '/images/spiderweb-white.png'
             )}
-            w={6}
+            w={5}
             alt="Spiderweb image"
             ml={2}
-          ></Image>
+          ></Image> */}
         </Heading>
         <List>
           <ListItem>
@@ -189,30 +196,50 @@ const Home = () => (
           </ListItem>
         </List>
 
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
-          >
-            My YouTube channel
-          </GridItem>
-          <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
-          >
-            A Markdown note-taking app
-          </GridItem>
-        </SimpleGrid>
+        <SimpleGrid columns={[1, 2, 2]} gap={6} mt={4}>
+          <LinkBox cursor="pointer">
+            <Flex flexDirection="column" alignItems="center">
+              <Image
+                src="/images/youtube-thumbnail.jpg"
+                alt="Youtube Thumbnail"
+                height={200}
+                rounded="md"
+                objectFit="cover"
+              ></Image>
+              <LinkOverlay
+                href="https://www.youtube.com/channel/UCxRGxcY1ZNjnqSaNmgbY56g"
+                target="_blank"
+              >
+                <Text mt={2}>Check out my Youtube channel</Text>
+              </LinkOverlay>
+            </Flex>
+          </LinkBox>
 
-        <Box align="center" my={4}>
-          <NextLink href="/posts">
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Popular posts
-            </Button>
+          <NextLink href="/experience/jublia">
+            <Flex flexDirection="column" alignItems="center" cursor="pointer">
+              <Image
+                src="/images/jublia-journey.jpg"
+                alt="Jublia Journey"
+                height={200}
+                rounded="md"
+                objectFit="cover"
+              ></Image>
+
+              <Text mt={2}>My Frontend Journey as a Jublian</Text>
+            </Flex>
           </NextLink>
-        </Box>
+
+          {/* <GridItem
+            href="https://www.youtube.com/channel/UCxRGxcY1ZNjnqSaNmgbY56g"
+            title="Check out my Youtube Channel"
+            thumbnail={youtubeLogo}
+          ></GridItem>
+          <GridItem
+            href="/experience/jublia"
+            title="Frontend journey at Jublia"
+            thumbnail={jubliaJourney}
+          ></GridItem> */}
+        </SimpleGrid>
       </Section>
     </Container>
   </Layout>
