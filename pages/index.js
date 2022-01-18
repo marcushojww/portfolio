@@ -210,7 +210,7 @@ const Home = () => (
                 href="https://www.youtube.com/channel/UCxRGxcY1ZNjnqSaNmgbY56g"
                 target="_blank"
               >
-                <Text mt={2}>Check out my Youtube channel</Text>
+                <Text mt={2}>Check out my Youtube Channel</Text>
               </LinkOverlay>
             </Flex>
           </LinkBox>
