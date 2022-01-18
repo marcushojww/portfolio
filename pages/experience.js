@@ -1,18 +1,10 @@
-import { Container, Heading, SimpleGrid, Divider, Box } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
 import thumbnailJublia from '../public/images/experience/jublia-card2.png'
-import thumbInkdrop from '../public/images/experience/inkdrop_eyecatch.png'
 import thumbnailAthena from '../public/images/experience/athenadynamics.jpg'
-import thumbFourPainters from '../public/images/experience/the-four-painters_eyecatch.jpg'
-import thumbMenkiki from '../public/images/experience/menkiki_eyecatch.png'
-import thumbModeTokyo from '../public/images/experience/modetokyo_eyecatch.png'
-import thumbStyly from '../public/images/experience/styly_eyecatch.png'
-import thumbPichu2 from '../public/images/experience/pichu2_eyecatch.png'
-import thumbFreeDBTagger from '../public/images/experience/freedbtagger_eyecatch.png'
-import thumbAmembo from '../public/images/experience/amembo_eyecatch.png'
 
 const Experience = () => (
   <Layout title="Professional Experience">

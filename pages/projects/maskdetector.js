@@ -49,7 +49,7 @@ const Work = () => (
           </Link>
         </ListItem>
       </List>
-      <Button>
+      <Button colorScheme="teal" mb={4}>
         <a href="/assets/mask_detector_report.pdf" download>
           Download PDF Report
         </a>

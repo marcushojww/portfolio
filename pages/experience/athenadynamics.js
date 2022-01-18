@@ -5,11 +5,10 @@ import {
   List,
   ListItem,
   UnorderedList,
-  Box,
   Icon
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { ExperienceTitle, WorkImage, Meta } from '../../components/work'
+import { ExperienceTitle, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 

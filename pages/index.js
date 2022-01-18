@@ -16,7 +16,6 @@ import {
   LinkBox,
   LinkOverlay
 } from '@chakra-ui/react'
-import ImageNext from 'next/image'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { MdOutlineWavingHand } from 'react-icons/md'
 import Paragraph from '../components/paragraph'
@@ -24,9 +23,8 @@ import { BioSection, BioYear } from '../components/bio'
 import { SkillsSection, SkillsType, SkillsValues } from '../components/skills'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
 import { IoLogoLinkedin, IoLogoGithub, IoMailOutline } from 'react-icons/io5'
-import { SiGmail } from 'react-icons/si'
+import { IoMdDownload } from 'react-icons/io'
 
 const Home = () => (
   <Layout>
@@ -37,7 +35,7 @@ const Home = () => (
         p={3}
         justifyContent="center"
         align="center"
-        bg={useColorModeValue('#ffffff40', 'whiteAlpha.200')}
+        bg={useColorModeValue('gray.200', 'whiteAlpha.200')}
       >
         Hey <Icon ml={1} mr={2} as={MdOutlineWavingHand} /> I'm an aspiring
         full-stack developer based in Singapore!
@@ -147,15 +145,6 @@ const Home = () => (
       <Section delay={0.3}>
         <Heading display="flex" align="center" as="h3" variant="section-title">
           On the Web
-          {/* <Image
-            src={useColorModeValue(
-              '/images/spiderweb-black.png',
-              '/images/spiderweb-white.png'
-            )}
-            w={5}
-            alt="Spiderweb image"
-            ml={2}
-          ></Image> */}
         </Heading>
         <List>
           <ListItem>
@@ -194,6 +183,17 @@ const Home = () => (
               </Button>
             </Link>
           </ListItem>
+          <ListItem>
+            <Link href="/assets/marcus-ho-jun-wei-resume.pdf" download>
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoMdDownload} />}
+              >
+                Download Resume
+              </Button>
+            </Link>
+          </ListItem>
         </List>
 
         <SimpleGrid columns={[1, 2, 2]} gap={6} mt={4}>
@@ -228,17 +228,6 @@ const Home = () => (
               <Text mt={2}>My Frontend Journey as a Jublian</Text>
             </Flex>
           </NextLink>
-
-          {/* <GridItem
-            href="https://www.youtube.com/channel/UCxRGxcY1ZNjnqSaNmgbY56g"
-            title="Check out my Youtube Channel"
-            thumbnail={youtubeLogo}
-          ></GridItem>
-          <GridItem
-            href="/experience/jublia"
-            title="Frontend journey at Jublia"
-            thumbnail={jubliaJourney}
-          ></GridItem> */}
         </SimpleGrid>
       </Section>
     </Container>

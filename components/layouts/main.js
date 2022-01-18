@@ -18,15 +18,10 @@ const Main = ({ children, router }) => {
         <meta name="description" content="Marcus Ho Jw's Portfolio" />
         <meta name="author" content="Marcus Ho Jw" />
         <meta name="author" content="marcushojww" />
-        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link rel="miles-morales" href="miles-morales.png" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@marcushojww" />
-        <meta name="twitter:creator" content="@marcushojww" />
-        <meta name="twitter:image" content="/card.png" />
         <meta property="og:site_name" content="Marcus Ho Jw's Portfolio" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/card.png" />
         <title>Marcus Ho Jw's Portfolio</title>
       </Head>
 
