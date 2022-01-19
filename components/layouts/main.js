@@ -22,6 +22,10 @@ const Main = ({ children, router }) => {
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <meta property="og:site_name" content="Marcus Ho Jw's Portfolio" />
         <meta property="og:type" content="website" />
+        <meta property="og:URL" content="website" />
+        <meta property="og:image" content="/inages/youtube-thumbnail.jpg" />
+        <meta property="og:title" content="Marcus Ho Jw's Portfolio" />
+
         <title>Marcus Ho Jw's Portfolio</title>
       </Head>
 
