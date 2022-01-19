@@ -23,7 +23,7 @@ const Main = ({ children, router }) => {
         <meta property="og:site_name" content="Marcus Ho Jw's Portfolio" />
         <meta property="og:type" content="website" />
         <meta property="og:URL" content="website" />
-        <meta property="og:image" content="/inages/youtube-thumbnail.jpg" />
+        <meta property="og:image" content="/images/youtube-thumbnail.jpg" />
         <meta property="og:title" content="Marcus Ho Jw's Portfolio" />
 
         <title>Marcus Ho Jw's Portfolio</title>
